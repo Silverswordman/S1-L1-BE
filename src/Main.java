@@ -8,7 +8,7 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
        int x= 4 ,y=2;
 
-            System.out.println(x*y);
+            System.out.println("result"+" " + x*y);
 
             String firstWord = " Anni";
             int z= 30;
