@@ -1,22 +1,31 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main2 {
 
     public static void main(String[] args) {
-Scanner input =new Scanner(System.in);
-System.out.println("Type the first string");
-String firstString=input.nextLine();
-System.out.println( "First String " +  firstString);
-String secondString=input.nextLine();
-System.out.println( "Second String " +  secondString);
-String thirdString=input.nextLine();
-System.out.println( "Third String " +  thirdString);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Inserisci una parola");
+        String firstString = input.nextLine();
+        System.out.println("La prima parola è: -" + firstString + "- ora inserisci un altra parola");
+        String secondString = input.nextLine();
+        System.out.println("La seconda parola è -" + secondString + "- ora inserisci un altra parola");
+        String thirdString = input.nextLine();
+        System.out.println("La terza parola è -" + thirdString + "- ora inserisci un altra parola");
 
-String firstPhrase = " " + firstString + " " + secondString+ " " +  thirdString;
-System.out.println ( "Ordered strings" +  firstPhrase);
+        List<String> listaStringhe = new ArrayList<>();
+        listaStringhe.add(firstString);
+        listaStringhe.add(secondString);
+        listaStringhe.add(thirdString);
 
-String secondPhrase = " "+thirdString + " " + firstString+ " " +  secondString;
-System.out.println ( "Unordered strings" + secondPhrase);
- input.close();
+        System.out.println("Lista in ordine di inserimento " + listaStringhe);
+
+
+        Collections.reverse(listaStringhe);
+
+        System.out.println("Lista al contrario " + listaStringhe);
+        input.close();
     }
 }
